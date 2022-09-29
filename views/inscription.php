@@ -22,7 +22,10 @@
         <i class="bi bi-lock"></i>
         <input type="password" placeholder="Votre mot de passe..." name="pwd2Inscription">
     </span>
-    <p class="txtSubForm">Vous avez déjà un compte ? <a href="/connection">Cliquez ici.</a></p>
+    <span>
+        <i class="bi bi-info-circle-fill" style="color: rgba(0, 207, 211, 1); top: 10px; left: 5px;font-size: 15px"></i>
+        <p class="txtSubForm">Vous avez déjà un compte ? <a href="/connection">Cliquez ici.</a></p>
+    </span>
     <span>
         <input type="submit" value="s'inscrire" name="btnInscription" class="btn-form">
     </span>

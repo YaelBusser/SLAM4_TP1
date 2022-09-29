@@ -3,14 +3,17 @@
     <span>
         <i class="bi bi-person"></i>
         <input type="text" placeholder="Votre login..." name="login" value="<?php if (isset($_POST["login"])) {
-        echo $_POST["login"];
-    } ?>">
+            echo $_POST["login"];
+        } ?>">
     </span>
     <span>
         <i class="bi bi-lock"></i>
         <input type="password" placeholder="Votre mot de passe..." name="pwd">
     </span>
-    <p class="txtSubForm">Vous n'avez pas encore de compte ? <a href="/inscription">Cliquez ici.</a></p>
+    <span>
+        <i class="bi bi-info-circle-fill infoIcon" style="color: rgba(0, 207, 211, 1); top: 10px; left: 5px;font-size: 15px"></i>
+        <p class="txtSubForm">Vous n'avez pas encore de compte ? <a href="/inscription">Cliquez ici.</a></p>
+    </span>
     <input type="submit" value="se connecter" name="btnConnection" class="btn-form">
     <?php
     if (isset($errorConnection) && $errorConnection != "") {

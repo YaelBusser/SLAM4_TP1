@@ -1,84 +1,121 @@
-.block-img-like{
+.block-img-like {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.img-like{
+
+.img-like {
     width: 500px;
 }
-.block-form{
+
+.block-form {
     width: 500px;
     padding: 2em;
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 207, 211, 0.05);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 5px 5px 5px 5px;
 }
-.block-form span{
+
+.block-form span {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 250px;
     position: relative;
 }
-.block-form input{
+
+.block-form input {
     width: 250px;
     margin: auto;
     margin-top: 1em;
     border-radius: 5px 5px 5px 5px;
-    border-style: solid;
-    border: 1px solid rgba(0,0,0,0.5);
-    text-align: center;
-    padding: 0.5rem;
-    background-color: rgba(0, 207, 211 , 0.1);
-}
-.block-form input::placeholder{
-    text-align: center;
-    color: rgba(0,0,0,0.8);
-}
-.block-form input:focus{
+    border-style: none;
     border: none;
+    padding: 0.5rem;
+    background-color: rgba(0, 207, 211, 0.1);
+    text-align: center;
 }
-.block-form p{
+
+.block-form input::placeholder {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+}
+.block-form input:focus {
+    outline: none;
+}
+
+.block-form p {
     text-align: center;
     margin-top: 10px;
 }
-input[type=submit]{
+
+.block-form input[type=submit] {
     min-height: 50px;
     text-transform: uppercase;
-    background-color: rgba(0, 207, 211 ,1);
+    background-color: rgba(0, 207, 211, 1);
     color: white;
     transition: ease-in-out 0.2s;
 }
-input[type=submit]:hover{
-    background-color: rgba(0,207,211,0.1);
-    color: rgba(0,0,0,0.8);
+
+.block-form input[type=submit]:hover {
+    background-color: rgba(0, 207, 211, 0.1);
+    color: rgba(0, 0, 0, 0.8);
 }
-.block-form h1{
+
+.block-form h1 {
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: rgba(0, 207, 211, 0.8);
+    border-bottom: 1px solid rgba(0, 207, 211, 0.5);
 }
-.block-form .bi{
-    color: rgba(0,0,0,0.8);
+
+.block-form .bi {
+    color: rgba(0, 0, 0, 0.5);
     font-size: 1.5em;
     position: absolute;
     left: 10px;
     top: 30%;
 }
-.block-form .errorForm{
-    background-color: rgba(255,0,0,0.6);
+
+.block-form .errorForm {
+    background-color: rgba(255, 0, 0, 0.6);
     color: white;
     padding: 1rem;
+    border-radius: 5px 5px 5px 5px;
 }
-.txtSubForm{
-    margin-top: 5em;
+
+.txtSubForm {
+    border-bottom: 1px solid rgba(0, 207, 211, 1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-style: ridge;
+    border-bottom-width: 10px;
+    background-color: rgba(0,207,211,0.1);
+    padding: 1rem;
+    border-radius: 5px 5px 5px 5px;
 }
-.txtSubForm a{
-    color: rgba(0, 207, 211 ,1);
+
+.txtSubForm a {
+    color: rgba(0, 207, 211, 1);
     text-decoration: none;
     transition: ease-in-out 0.2s;
 }
-.txtSubForm a:hover{
+
+.txtSubForm a:hover {
     text-decoration: underline;
-    color: rgba(0,207,211,0.5);
+    color: rgba(0, 207, 211, 0.5);
+}
+.nav-item a{
+    color: rgba(0, 207, 211, 1);
+    transition: ease-in-out 0.2s;
+}
+.nav-item a:hover{
+    color: rgba(0, 207, 211, 0.5);
 }
