@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 29 sep. 2022 à 17:09
+-- Généré le : jeu. 29 sep. 2022 à 23:32
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 8.1.6
 
@@ -40,8 +40,16 @@ CREATE TABLE `todos` (
 --
 
 INSERT INTO `todos` (`id`, `texte`, `termine`, `timestamp`, `id_user`) VALUES
-                                                                           (7, 'Prendre du pain', 0, '2022-09-29 13:48:55', 1),
-                                                                           (8, 'ee', 0, '2022-09-29 14:40:46', 3);
+                                                                           (10, 'Acheter du pain', 0, '2022-09-29 20:58:35', 1),
+                                                                           (11, 'Acheter des préservatifs', 0, '2022-09-29 20:58:56', 1),
+                                                                           (12, 'Aller à la salle 2 fois cette semaine', 0, '2022-09-29 21:13:37', 9),
+                                                                           (13, 'Aller au bar 3 fois cette semaine', 0, '2022-09-29 21:13:53', 9),
+                                                                           (14, 'Rencontrer au minimum 5 filles différentes cette semaine', 0, '2022-09-29 21:14:12', 9),
+                                                                           (15, 'Faire le défi de rouler à 200km/h sur le chemin du retour ! A fond la caisse', 0, '2022-09-29 21:16:14', 10),
+                                                                           (16, 'Défi : Se raser le bouc ', 0, '2022-09-29 21:16:40', 10),
+                                                                           (17, 'Commander sa nourriture sur leclerc drive', 0, '2022-09-29 21:16:59', 10),
+                                                                           (18, 'S\'entrainer 5 fois cette semaine à CS:GO pour enfin passer \"Maitre Gardien\" !!! ', 0, '2022-09-29 21:18:07', 11),
+(19, 'Venir au lycée en courant cette semaine', 0, '2022-09-29 21:18:30', 11);
 
 -- --------------------------------------------------------
 
@@ -62,9 +70,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id_user`, `login`, `pwd`, `email`) VALUES
                                                              (1, 'yael', '$2y$10$VgAGaWwL5xNescPDfZA6ZOf0CxA/dCraDeIK0q8XzFFSqHLEyH.De', 'yb@gmail.com'),
-                                                             (3, 'yaele', '$2y$10$ItXxbD/aopwvY2nO2mgUHO1hW7YVfALmamPvuPPa5fMxVrswWYneS', 'dsds@dsds.com'),
-                                                             (5, 'ok', '$2y$10$WZDcxXRlHm70muGpT3uSNOHPyyD1XkHtXJ6GYLbJM371jWXnPXLly', 'ok@ok.com'),
-                                                             (6, 'aa', '$2y$10$0jHuP8lVCauBoq/2jHFKY.7F5Bocl3ngJLOYymQT9SqRxeUPym/Su', 'aa@aa.com');
+                                                             (9, 'maclevine', '$2y$10$Euu9LiolBLjDscQKnt7zDOnENjMZJYrl3r27RqEUdYFyq.ERAW.6i', 'maclevine@gmail.com'),
+                                                             (10, 'Timeo', '$2y$10$Ztjj1VeKnCEctkMVHm4QVOTTVPoLZiS0eaP2UMejKxmmJOgnKUTEO', 'timeo@gmail.com'),
+                                                             (11, 'Antoine', '$2y$10$h4kXM/dZwycX2/QO.DAu5uOTkC5F5WmhHbHU70DRHiKKqnzZYmGpW', 'antoine@gmail.com');
 
 --
 -- Index pour les tables déchargées
@@ -92,13 +100,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `todos`
 --
 ALTER TABLE `todos`
-    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-    MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+    MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Contraintes pour les tables déchargées

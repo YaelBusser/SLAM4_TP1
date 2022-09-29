@@ -29,12 +29,17 @@ class InscriptionController extends Web
                 $pwd2Inscription = $_POST["pwd2Inscription"];
                 $loginExistInscription = $this->connectionModel->IsLoginExist($loginInscription);
                 if ($loginExistInscription["count"] == 0) {
-                    if ($pwdInscription == $pwd2Inscription) {
-                        $pwdInscription = password_hash($_POST["pwdInscription"], PASSWORD_DEFAULT);
-                        $this->inscriptionModel->createUser($loginInscription, $emailInscription, $pwdInscription);
-                        $this->redirect("/connection?creation=ok");
+                    $emailExist = $this->connectionModel->IsEmailExist($emailInscription);
+                    if ($emailExist["count"] == 0) {
+                        if ($pwdInscription == $pwd2Inscription) {
+                            $pwdInscription = password_hash($_POST["pwdInscription"], PASSWORD_DEFAULT);
+                            $this->inscriptionModel->createUser($loginInscription, $emailInscription, $pwdInscription);
+                            $this->redirect("/connection?creation=ok");
+                        } else {
+                            $errorInscription = "Vos mots de passe ne correspondent pas !";
+                        }
                     } else {
-                        $errorInscription = "Vos mots de passe ne correspondent pas !";
+                        $errorInscription = "Cette adresse mail est déjà liée à un compte !";
                     }
                 } else {
                     $errorInscription = "Ce compte utilisateur existe déjà !";

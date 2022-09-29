@@ -18,6 +18,13 @@ class ConnectionModel extends SQL
         $stmt->execute([$login]);
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
+    function IsEmailExist($email)
+    {
+        $stmt = $this->pdo->prepare("SELECT COUNT(id_user) AS 'count' FROM users WHERE email = ?;
+");
+        $stmt->execute([$email]);
+        return $stmt->fetch(\PDO::FETCH_ASSOC);
+    }
     function getPasswordByLogin($login)
     {
         $stmt = $this->pdo->prepare("SELECT pwd FROM users WHERE login = ?;

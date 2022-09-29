@@ -29,6 +29,7 @@
             <?php
             if (isset($_SESSION["user"])) {
                 ?>
+                <li class="nav-item"><a href="/todo/list" class="nav-link">Mes todos</a></li>
                 <li class="nav-item"><a href="/logout" class="nav-link">Se déconnecter</a></li>
             <?php }else {?>
                 <li class="nav-item"><a href="/connection" class="nav-link">Se connecter</a></li>

@@ -8,23 +8,77 @@
 }
 .block-form{
     width: 500px;
+    padding: 2em;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2em;
-    margin: auto;
+    align-items: center;
+}
+.block-form span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    position: relative;
 }
 .block-form input{
     width: 250px;
     margin: auto;
     margin-top: 1em;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid;
+    border: 1px solid rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 0.5rem;
+    background-color: rgba(0, 207, 211 , 0.1);
+}
+.block-form input::placeholder{
+    text-align: center;
+    color: rgba(0,0,0,0.8);
 }
 .block-form input:focus{
     border: none;
 }
 .block-form p{
     text-align: center;
-    color: red;
     margin-top: 10px;
+}
+input[type=submit]{
+    min-height: 50px;
+    text-transform: uppercase;
+    background-color: rgba(0, 207, 211 ,1);
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+input[type=submit]:hover{
+    background-color: rgba(0,207,211,0.1);
+    color: rgba(0,0,0,0.8);
+}
+.block-form h1{
+    text-align: center;
+}
+.block-form .bi{
+    color: rgba(0,0,0,0.8);
+    font-size: 1.5em;
+    position: absolute;
+    left: 10px;
+    top: 30%;
+}
+.block-form .errorForm{
+    background-color: rgba(255,0,0,0.6);
+    color: white;
+    padding: 1rem;
+}
+.txtSubForm{
+    margin-top: 5em;
+}
+.txtSubForm a{
+    color: rgba(0, 207, 211 ,1);
+    text-decoration: none;
+    transition: ease-in-out 0.2s;
+}
+.txtSubForm a:hover{
+    text-decoration: underline;
+    color: rgba(0,207,211,0.5);
 }
