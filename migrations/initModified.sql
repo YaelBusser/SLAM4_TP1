@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 29 sep. 2022 à 17:06
+-- Généré le : jeu. 29 sep. 2022 à 17:09
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 8.1.6
 
@@ -63,7 +63,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id_user`, `login`, `pwd`, `email`) VALUES
                                                              (1, 'yael', '$2y$10$VgAGaWwL5xNescPDfZA6ZOf0CxA/dCraDeIK0q8XzFFSqHLEyH.De', 'yb@gmail.com'),
                                                              (3, 'yaele', '$2y$10$ItXxbD/aopwvY2nO2mgUHO1hW7YVfALmamPvuPPa5fMxVrswWYneS', 'dsds@dsds.com'),
-                                                             (4, 'ds', '$2y$10$6DRNpJ1dc6jPR315poaGJuwbR1ATD04idTb3YSHRN.hjo4JEqBzaO', 'dsds@dsds.com'),
                                                              (5, 'ok', '$2y$10$WZDcxXRlHm70muGpT3uSNOHPyyD1XkHtXJ6GYLbJM371jWXnPXLly', 'ok@ok.com'),
                                                              (6, 'aa', '$2y$10$0jHuP8lVCauBoq/2jHFKY.7F5Bocl3ngJLOYymQT9SqRxeUPym/Su', 'aa@aa.com');
 
@@ -82,7 +81,8 @@ ALTER TABLE `todos`
 -- Index pour la table `users`
 --
 ALTER TABLE `users`
-    ADD PRIMARY KEY (`id_user`);
+    ADD PRIMARY KEY (`id_user`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
