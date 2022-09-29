@@ -17,10 +17,11 @@ class TodoWeb extends Web
 
     function list()
     {
-        $todos = $this->todoModel->getAll(); // Récupération des TODOS présents en base.
-        Template::render("views/todos/list.php", array('todos' => $todos)); // Affichage de votre vue.
+        #$todos = $this->todoModel->getAll(); // Récupération des TODOS présents en base.
+        #Template::render("views/todos/list.php", array('todos' => $todos)); // Affichage de votre vue.
+        $todos = $this->todoModel->getTodosByIdUser($_SESSION["user"]["id_user"]);
+        Template::render("views/todos/list.php", array("todos" => $todos));
     }
-
     function ajouter($text = "")
     {
         $this->todoModel->ajouterTodo($text);

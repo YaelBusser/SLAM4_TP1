@@ -6,3 +6,25 @@
 .img-like{
     width: 500px;
 }
+.block-form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    margin: auto;
+}
+.block-form input{
+    width: 250px;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 10px 10px 10px 10px;
+}
+.block-form input:focus{
+    border: none;
+}
+.block-form p{
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+}

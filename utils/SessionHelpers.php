@@ -13,18 +13,18 @@ class SessionHelpers
 
     static function login($user)
     {
-        $_SESSION['USER'] = $user;
+        $_SESSION['user'] = $user;
     }
 
     static function logout()
     {
-        unset($_SESSION['USER']);
+        unset($_SESSION['user']);
     }
 
     static function getConnected()
     {
         if (SessionHelpers::isLogin()) {
-            return $_SESSION['USER'];
+            return $_SESSION['user'];
         } else {
             return array();
         }
@@ -32,6 +32,6 @@ class SessionHelpers
 
     static function isLogin()
     {
-        return isset($_SESSION['USER']);
+        return isset($_SESSION['user']);
     }
 }

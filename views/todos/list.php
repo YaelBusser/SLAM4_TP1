@@ -11,6 +11,8 @@
 
             <!-- Liste -->
             <ul class="list-group pt-3">
+                <p>Bonjour <?= $_SESSION["user"]["login"] ?>, voici vos todos listes :</p>
+
                 <?php
                 foreach ($todos as $todo) {
                     ?>
