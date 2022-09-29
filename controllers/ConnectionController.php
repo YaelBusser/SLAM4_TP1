@@ -13,7 +13,10 @@ class ConnectionController extends Web
     {
         $this->connectionModel = new ConnectionModel();
     }
-
+    /*
+        Méthode connection qui permet de déterminer toutes les erreurs du formulaire et
+        de permettre à l'utilisateur de se connecter !
+    */
     function connection()
     {
         $error = "";

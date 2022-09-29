@@ -17,7 +17,7 @@ class InscriptionController extends Web
         $this->connectionModel = new ConnectionModel();
         $this->inscriptionModel = new InscriptionModel();
     }
-
+    # Méthode inscription qui permet de déterminer toutes les erreurs du formulaire et de créer un nouvel utilisateur
     function inscription()
     {
         $errorInscription = "";

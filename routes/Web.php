@@ -33,8 +33,13 @@ class Web
         //        }
         Route::Add('/sample/{id}', [$main, 'sample']);
         $connection = new ConnectionController();
+        #Définition de la route qui renvoit le template et les conditions associées
+        # de la méthode Connection contenue dans le controller ConnectionController
         Route::Add('/connection', [$connection, 'connection']);
+        #Route qui renvoit vers la méthode de déconnexion contenue dans le controller ConnectionController
         Route::Add('/logout', [$connection, 'logout']);
+        #Définition de la route qui renvoit le template et les conditions associées
+        # de la méthode inscription contenue dans le controller InscriptionController
         $inscription = new InscriptionController();
         Route::Add('/inscription', [$inscription, 'inscription']);
     }
